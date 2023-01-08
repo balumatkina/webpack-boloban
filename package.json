@@ -11,7 +11,7 @@
     "lint-sass": "sass-lint -v -q --format=compact",
     "lint-js": "eslint --ext .js src/js/"
   },
-  "author": "olegbb@bolobanoleg@gmail.com",
+  "author": "--",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -37,5 +37,8 @@
     "url-loader": "^2.0.0",
     "webpack": "^4.34.0",
     "webpack-cli": "^3.3.4"
+  },
+  "dependencies": {
+    "flickity": "^3.0.0"
   }
 }

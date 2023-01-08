@@ -1,0 +1,152 @@
+.horizontal-scroll {
+  height: 504px;
+
+  background-color: var(--site-light);
+
+  // border-style: solid;
+  // border-color: black; 
+}
+
+.flickity-wrap {
+  padding-top: 60px;
+}
+
+.spin-wrap {
+  border-style: solid;
+  border-color: var(--site-light-blue);
+  border-width: 2px;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 813px;
+  height: 384px;
+  margin-right: 24px;
+}
+
+.spin-wrap.is-selected {
+  border-color: var(--site-blue);
+}
+
+.spin-annotation {
+  max-width: 290px;
+  flex: 1;
+  height: 305px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* border-style: solid;
+  border-color: violet; */
+}
+
+.spin-name {
+  margin-top: 8px;
+
+  text-decoration: none;
+  color: var(--basic-black);
+
+  // border-style: solid;
+  // border-color: black; 
+}
+
+.spin-name h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.spin-text {
+  font-family: 'Lusitana', serif;
+  font-weight: 400;
+  font-size: 1em;
+
+  // border-style: solid;
+  // border-color: blue;
+}
+
+.spin-button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+
+  color: var(--site-light);
+
+  background-color: var(--site-blue);
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 10px 0;
+
+  cursor: pointer;
+}
+
+.spin-image {
+  height: 304px;
+  width: 290px;
+  object-fit: cover;
+
+  border-radius: 4px;
+}
+
+/* aircraft spin */
+.aircraft-annotation{
+  margin-right: 24px;
+}
+
+.aircraft-flickity {
+  margin-right: 7.22%;
+}
+
+/* pilots spin */
+.pilot-annotation {
+  margin-left: 24px;
+}
+
+.pilot-flickity {
+  margin-left: 7.22%;
+}
+
+@media screen and (441px <= width <= 1024px) {
+  
+  .horizontal-scroll {
+    height: 464px;
+  
+    .flickity-wrap {
+      padding-top: 40px;
+
+      .spin-wrap {
+        width: 789px;
+
+        .spin-annotation {
+          max-width: 256px;
+          height: 304px;
+
+          .spin-name {
+           h3 {
+            font-size: 1.5em;
+           }
+          }
+        }
+        
+        .spin-image {
+          width: 323px;
+        }
+      }
+    }
+
+    .aircraft-flickity {
+      margin-right: 60px;
+    }
+
+    .pilot-flickity {
+      margin-left: 60px;
+    }
+  }
+}
+

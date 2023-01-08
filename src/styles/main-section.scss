@@ -1,0 +1,132 @@
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 904px;
+
+    user-select: none;
+
+    // border-style: solid;
+    // border-color: blueviolet; 
+}
+
+.main-section-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    max-width: 1440px;
+    flex: 1;
+
+    // border-style: solid;
+    // border-color: pink;
+}
+
+.main-section-left-section {
+    max-width: 604px;
+    flex: 1;
+
+    padding: 64px 0;
+
+    margin-left: 104px;
+
+    display: flex;
+    flex-direction: column;
+
+    // border-style: solid;
+    // border-color: violet; 
+}
+
+.hero-text-main-section {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 8.5em;
+    line-height: 144px;
+    color: var(--site-light);
+    
+    margin-top: 0;
+    margin-bottom: 0;
+
+    white-space: nowrap;
+
+    // border-style: solid;
+    // border-color: black; 
+}
+
+.yellow-hero-text {
+    color: var(--site-yellow);
+}
+
+.main-section-plane-image {
+    height: auto;
+
+    // border-style: solid;
+    // border-color: black;
+}
+
+@media screen and (max-width: 440px) {
+  
+  .main-section {
+    height: 595px;
+
+    .main-section-wrapper {
+      max-width: 375px;
+      position: relative;
+
+      .main-section-left-section {
+        position: absolute;
+        max-width: 314px;
+
+        padding: 0;
+        margin-left: 30px;
+
+        .hero-text-main-section {
+          font-size: 4em;
+          line-height: 80px;
+        }
+
+        .main-section-paper-plane {
+          height: 79px;
+          width: 79px;
+          rotate: 90deg;
+
+          margin-top: 20px;
+        }
+      }
+
+      .main-section-plane-image {
+        position: absolute;
+        width: 360px;
+        height: auto;
+
+        bottom: 0;
+        right: -110px;
+      }
+    }
+  }
+  
+}
+
+@media screen and (441px <= width <= 1024px) {
+
+  .main-section {
+    height: 624px;
+
+    .main-section-wrapper {
+      max-width: 1024px;
+
+      .main-section-left-section {
+        max-width: 436px;
+
+        margin-left: 60px;
+        padding: 24px 0 0 0;
+        
+        .hero-text-main-section {
+          font-size: 96px;
+          line-height: 113px;
+        }
+      }
+    }
+  }
+}

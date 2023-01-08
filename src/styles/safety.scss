@@ -1,0 +1,141 @@
+.safety-section {
+    height: 336px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: var(--site-light);
+
+    user-select: none;
+
+    // border-color: purple;
+    // border-style: solid;
+}
+
+.safety-section-wrapper {
+    max-width: 1232px;
+    flex: 1;
+    
+    // border-color: purple;
+    // border-style: solid; 
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.safety-icons-text-wrap {
+    // border-color: red;
+    // border-style: solid; 
+
+    max-width: 395px;
+    flex: 1;
+    height: 336px;
+    padding: 72px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.safety-text-icon-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+
+    // border-color: blue;
+    // border-style: solid;
+}
+
+.safety-text {
+    width: 290px;
+    margin-left: 30px;
+
+    font-family: 'Lusitana', serif;
+    font-size: 1.5em;
+    font-weight: 400;
+
+    // border-color: red;
+    // border-style: solid;
+}
+
+.safety-hero-text-container {
+    width: 813px;
+    height: 336px;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    // border-style: solid;
+    // border-color: black;
+}
+
+.safety-hero-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15em;
+    font-weight: 800;
+    text-align: end;
+
+    // border-color: pink;
+    // border-style: solid;
+
+    color: var(--site-hero-text);
+}
+
+@media screen and (441px <= width <= 1024px) {
+
+  .safety-section {
+    height: 288px;
+
+    .safety-section-wrapper {
+      max-width: 904px;
+
+      position: relative;
+
+      .safety-icons-text-wrap {
+
+        position: absolute;
+
+        max-width: 323px;
+        height: 288px;
+        padding: 56px 0;
+
+        .safety-text-icon-block {
+
+          .plane-icon {
+           padding: 0 2px;
+          }
+
+          .support-icon {
+            padding: 3px 3px;
+          }
+            
+          .safety-text {
+            z-index: 1;
+            width: 207px;
+
+            font-size: 1.25em;
+            line-height: 26px;
+          }
+        }
+      }
+        
+      .safety-hero-text-container {
+        position: absolute;
+        z-index: 0;
+        right: 0;
+        height: 288px;
+    
+        .safety-hero-text {
+            font-size: 12.5em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.about-us-section {
+    // border-style: solid;
+    // border-color: pink;
+
+    height: 905px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: var(--site-light);
+
+    user-select: none;
+}
+
+.about-us-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    max-width: 1232px;
+    flex: 1;
+
+    // border-style: solid;
+    // border-color: black;
+}
+
+.about-us-decoration {
+    height: auto;
+    max-width: 499px;
+}
+
+.about-us-right-side {
+    // border-style: solid;
+    // border-color: blue;
+
+    width: 709px;
+
+    margin-left: 24px;
+
+    position: relative;
+}
+
+.about-us-hero-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15em;
+    font-weight: 800;
+    line-height: 290px;
+
+    text-align: right;
+    padding-top: 64px;
+
+    position: absolute;
+    right: 0;
+
+    // border-style: solid;
+    // border-color: red;
+
+    color: var(--site-hero-text);
+
+    cursor: default;
+}
+
+.about-us-article {
+    font-family: 'Lusitana', serif;
+    font-size: 1.5em;
+    line-height: 32px;
+    font-weight: 400;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: absolute;
+
+    margin-left: 104px;
+    padding-top: 216px;
+
+    max-width: 499px;
+    flex: 1;
+
+    height: 905px;
+
+    cursor: default;
+
+    // border-style: solid;
+    // border-color: green;
+
+}
+
+@media screen and (441px <= width <= 1024px) {
+
+  .about-us-section {
+    height: 720px;
+
+      .about-us-wrapper {
+        max-width: 904px;
+
+        .about-us-decoration {
+          max-width: 324px;
+        }
+        
+        .about-us-right-side {
+          width: 556px;
+
+          .about-us-hero-text {
+            font-size: 11.25em;
+            line-height: 211px;
+
+            padding-top: 56px;
+          }
+
+          .about-us-article {
+            font-size: 1.25em;
+            line-height: 28px;
+
+            margin-left: 56px;
+            padding-top: 160px;
+
+            height: 702px;
+            max-width: 442px;
+          }
+      }
+    }
+  }
+}
