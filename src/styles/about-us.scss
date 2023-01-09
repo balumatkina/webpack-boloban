@@ -1,21 +1,23 @@
-.about-us-section {
-    // border-style: solid;
-    // border-color: pink;
-
-    height: 905px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    background-color: var(--site-light);
-
-    user-select: none;
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
-.about-us-wrapper {
-    display: flex;
-    flex-direction: row;
+.about-us-section {
+  height: 905px;
+
+  @include flex-row;
+  justify-content: center;
+
+  background-color: var(--site-light);
+
+  user-select: none;
+
+  // border-style: solid;
+  // border-color: pink;
+
+  .about-us-wrapper {
+    @include flex-row;
     justify-content: center;
 
     max-width: 1232px;
@@ -23,69 +25,112 @@
 
     // border-style: solid;
     // border-color: black;
+
+    img {
+      height: auto;
+      max-width: 499px;
+    }
+
+    .text-zone {  
+      width: 709px;
+  
+      margin-left: 24px;
+  
+      position: relative;
+      // border-style: solid;
+      // border-color: blue;
+
+      h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 15em;
+        font-weight: 800;
+        line-height: 290px;
+    
+        text-align: right;
+        padding-top: 64px;
+    
+        position: absolute;
+        right: 0;
+    
+        color: var(--site-hero-text);
+    
+        cursor: default;
+        // border-style: solid;
+        // border-color: red;
+      }
+
+      article {
+        font-family: 'Lusitana', serif;
+        font-size: 1.5em;
+        line-height: 32px;
+        font-weight: 400;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        position: absolute;
+    
+        margin-left: 104px;
+        padding-top: 216px;
+    
+        max-width: 499px;
+        flex: 1;
+    
+        height: 905px;
+    
+        cursor: default;
+    
+        // border-style: solid;
+        // border-color: green;
+      }
+    }
+  }
 }
 
-.about-us-decoration {
-    height: auto;
-    max-width: 499px;
-}
+@media screen and (max-width: 440px) {
+  
+  .about-us-section {
+    height: 744px;
 
-.about-us-right-side {
-    // border-style: solid;
-    // border-color: blue;
+    .about-us-wrapper {
+      position: relative;
+      max-width: 315px;
 
-    width: 709px;
+      img {
+        position: absolute;
+        max-width: 95px;
+        bottom: 0;
+        right: -32px;
+      }
 
-    margin-left: 24px;
+      .text-zone {    
+        width: 315px;
+        margin-left: 0;
+        margin-top: 24px;
 
-    position: relative;
-}
+        h2 {
+          font-size: 6.25em;
+          line-height: 98px;
 
-.about-us-hero-text {
-    font-family: 'Raleway', sans-serif;
-    font-size: 15em;
-    font-weight: 800;
-    line-height: 290px;
+          padding-top: 0;
+        }
 
-    text-align: right;
-    padding-top: 64px;
+        article {
+          font-size: 1em;
+          line-height: 20px;
 
-    position: absolute;
-    right: 0;
+          margin-left: 0;
+          padding-top: 56px;
 
-    // border-style: solid;
-    // border-color: red;
-
-    color: var(--site-hero-text);
-
-    cursor: default;
-}
-
-.about-us-article {
-    font-family: 'Lusitana', serif;
-    font-size: 1.5em;
-    line-height: 32px;
-    font-weight: 400;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    position: absolute;
-
-    margin-left: 104px;
-    padding-top: 216px;
-
-    max-width: 499px;
-    flex: 1;
-
-    height: 905px;
-
-    cursor: default;
-
-    // border-style: solid;
-    // border-color: green;
-
+          max-width: 231px;
+          height: 712px;
+      
+        }
+      }
+    }
+  }
+  
 }
 
 @media screen and (441px <= width <= 1024px) {
@@ -96,21 +141,21 @@
       .about-us-wrapper {
         max-width: 904px;
 
-        .about-us-decoration {
+        img {
           max-width: 324px;
         }
         
-        .about-us-right-side {
+        .text-zone {
           width: 556px;
 
-          .about-us-hero-text {
+          h2 {
             font-size: 11.25em;
             line-height: 211px;
 
             padding-top: 56px;
           }
 
-          .about-us-article {
+          article {
             font-size: 1.25em;
             line-height: 28px;
 

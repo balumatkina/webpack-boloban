@@ -6,7 +6,6 @@ import '../styles/safety.scss';
 import '../styles/spins.scss';
 import '../styles/footer.scss';
 import '../styles/reset.scss';
-import '../styles/resizes.scss';
 
 // const sum = (a, b) => a + b;
 
