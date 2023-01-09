@@ -73,7 +73,7 @@ header {
         max-width: 321px;
         flex: 1;
         // border-style: solid;
-        // border-color: red
+        // border-color: red;
 
         .right-icons {
           @include flex-row-jc-sb;
@@ -108,12 +108,14 @@ header {
         }
       }
     }
+
 }
 
 @media screen and (max-width: 440px) {
   
     header {
       height: 72px;
+      position: relative;
 
       .header-wrapper {
         max-width: 315px;
@@ -126,12 +128,101 @@ header {
           display: none;
         }
 
-        // .hide {
-        //   display: block;
-        // }
-      }
-    }
+        .hamburger-icon {
+          display: block;
+          margin-top: -2px;
+  
+          #burger {
+            width: 30px;
+            height: 2px;
+  
+            background: var(--site-light);
+  
+            display:inline-block;
+            position:relative;
+  
+            &::before, &::after {
+              content:'';
+  
+              width:30px;
+              height:2px;
     
+              background:var(--site-light);
+    
+              display:inline-block;
+              position:absolute;
+              transform-origin: center;
+              transition: all 0.35s ease;
+            }
+  
+            &::before {
+              top:-7px;
+            }
+  
+            &::after {
+              top:7px;
+            }
+  
+            &.open {
+              background:transparent;
+  
+              &::before {
+                transform: rotate(45deg);
+                top:0;
+              }
+  
+              &::after {
+                transform: rotate(-45deg);
+                top:0;
+              }
+            }
+          }
+  
+          ul {
+            z-index: 100;
+            display: block;
+            box-shadow: 0px 96px 96px 0px rgba(0,0,0,0.75);
+  
+            background:var(--site-blue);
+  
+            position:absolute;
+  
+            width:100%;
+            left:0;
+            top:100%;
+            padding:20px 0;
+  
+            transform:scaleY(0);
+  
+            transform-origin:center top;
+            transition: all 0.35s ease-out;
+  
+            &.open {
+              transform:scaleY(1);
+            }
+  
+            li {
+              padding:12px 60px;
+              text-align: right;
+  
+              a {
+                font-family: 'Raleway', sans-serif;
+                color: var(--site-light);
+                font-size: 1.25em;
+                font-weight: 600;
+                text-decoration: none;
+  
+                &:hover {
+                  color: var(--site-yellow);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      
+    }
   }
 
 @media screen and (441px <= width <= 1024px) {
