@@ -1,3 +1,6 @@
+$Lusitana: 'Lusitana', serif;
+$Raleway: 'Raleway', sans-serif;
+
 @mixin flex-row {
   display: flex;
   flex-direction: row;
@@ -56,7 +59,7 @@
             width: 290px;
             margin-left: 30px;
         
-            font-family: 'Lusitana', serif;
+            font-family: $Lusitana;
             font-size: 1.5em;
             font-weight: 400;
         
@@ -78,7 +81,7 @@
         // border-color: black;
 
         h3 {
-          font-family: 'Raleway', sans-serif;
+          font-family: $Raleway;
           font-size: 15em;
           font-weight: 800;
           text-align: end;

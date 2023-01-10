@@ -1,3 +1,6 @@
+$Lusitana: 'Lusitana', serif;
+$Raleway: 'Raleway', sans-serif;
+
 @mixin flex-row {
   display: flex;
   flex-direction: row;
@@ -7,7 +10,6 @@
   @include flex-row;
   justify-content: space-between;
 }
-
 
 footer {
   height: 840px;
@@ -51,7 +53,7 @@ footer {
         // border-style: solid;
 
         h2 {
-          font-family: 'Raleway', sans-serif;
+          font-family: $Raleway;
           font-weight: 700;
           font-size: 3.5em;
           line-height: 66px;
@@ -65,8 +67,10 @@ footer {
         .form-inline {
           @include flex-row-jc-sb;
 
-          &.form-control:first-of-type {
-            margin-right: 24px;
+          & .form-control {
+            &:first-of-type {
+              margin-right: 24px;
+            }
           }
         }
 
@@ -77,7 +81,7 @@ footer {
         .form-label {
           display: block;
       
-          font-family: 'Lusitana', serif;
+          font-family: $Lusitana;
           font-size: 1.5em;
           font-weight: 400;
           line-height: 31px;
@@ -95,9 +99,10 @@ footer {
           border-radius: 2px;
           border-width: 1px;
           border-color: var(--basic-black);
+          border-style: solid;
           outline-color: var(--site-yellow);
       
-          font-family: 'Lusitana', serif;
+          font-family: $Lusitana;
           font-size: 1em;
           font-weight: 400;
           line-height: 24px;
@@ -114,7 +119,7 @@ footer {
         button {
           width: 100%;
       
-          font-family: 'Raleway', sans-serif;
+          font-family: $Raleway;
           font-weight: 700;
           font-size: 1.5em;
           line-height: 28px;
@@ -132,7 +137,7 @@ footer {
         }
 
         .terms-of-service {
-          font-family: 'Lusitana', serif;
+          font-family: $Lusitana;
           font-size: 1em;
           font-weight: 400;
           line-height: 21px;
@@ -149,7 +154,7 @@ footer {
     }
 
     .right-links-wrap {
-      font-family: 'Raleway', sans-serif;
+      font-family: $Raleway;
   
       width: 604px;
   

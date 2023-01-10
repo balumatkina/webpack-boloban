@@ -1,3 +1,5 @@
+$Raleway: 'Raleway', sans-serif;
+
 @mixin flex-row {
   display: flex;
   flex-direction: row;
@@ -58,7 +60,7 @@ header {
               color: var(--site-light);
               text-decoration: none;
           
-              font-family: 'Raleway', sans-serif;
+              font-family: $Raleway;
               font-weight: 600;
               font-size: 1.5em;
             }
@@ -91,7 +93,7 @@ header {
         }
 
         button {
-          font-family: 'Raleway', sans-serif;
+          font-family: $Raleway;
           font-weight: 700;
           font-size: 1.5em;
       
@@ -179,6 +181,8 @@ header {
           }
   
           ul {
+            border-top: 1px solid var(--site-light);
+
             z-index: 100;
             display: block;
             box-shadow: 0px 96px 96px 0px rgba(0,0,0,0.75);
@@ -206,7 +210,7 @@ header {
               text-align: right;
   
               a {
-                font-family: 'Raleway', sans-serif;
+                font-family: $Raleway;
                 color: var(--site-light);
                 font-size: 1.25em;
                 font-weight: 600;
@@ -215,13 +219,15 @@ header {
                 &:hover {
                   color: var(--site-yellow);
                 }
+
+                &:active {
+                  color: var(--site-yellow);
+                }
               }
             }
           }
         }
       }
-
-      
     }
   }
 
