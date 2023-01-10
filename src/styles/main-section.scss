@@ -114,11 +114,8 @@
       img {
         position: absolute;
         width: 393px;
-        height: 373px;
+        height: auto;
         object-fit: contain;
-
-        border-style: solid;
-        border-color: black;
 
         bottom: 0;
         right: -136px;
